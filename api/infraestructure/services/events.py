@@ -36,7 +36,7 @@ class Event_Service:
             #i = items[0]
             try:
                 result = DB_Services.send_request(f"INSERT INTO events (api_id, title, description, categories, sources) VALUES ('{i['id']}', '{i['title']}', '{i['description']}', '{i['categories']}', '{i['sources']}')", commit=True)
-                print("RESLT ::: ",result)
+                print("RESULT ::: ",result)
             except Exception as e:
                 print(str(e))
         return True
